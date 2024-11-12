@@ -10,7 +10,12 @@ document
     if (pinNumber === 1234) {
       const Balance =getTextFieldValueById('account-balance');
      const newBalance = Balance + addMoney;
-    document.getElementById('account-balance').innerText = newBalance;
+      document.getElementById('account-balance').innerText = newBalance;
+      
+      // add transaction history
+      const p = document.createElement('p');
+      p.innerText = `Added:${addMoney} tk.Balance: ${newBalance}`;
+      console.log(p);
     } else {
       alert('failed to add the money');
     }
